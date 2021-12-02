@@ -1,0 +1,65 @@
+﻿<Window x:Class="Calc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <!--For Margin-->
+            <ColumnDefinition Width="1*"/>
+            <!--Labels-->
+            <ColumnDefinition Width="1*"/>
+            <!--Textbox for user input-->
+            <ColumnDefinition Width=".5*"/>
+            <!--for margin-->
+            <ColumnDefinition Width="1"/>
+            <!--Display results-->
+            <ColumnDefinition Width="1*"/>
+            <!--Area to display results-->
+            <ColumnDefinition Width="1*"/>
+            <!--Area to display results-->
+            <ColumnDefinition Width=".5*"/>
+            <!--Margin-->
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*"/>
+            <!--For margin-->
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <!--For the data grid-->
+            <RowDefinition Height=".5*"/>
+            <!--For Margin-->
+        </Grid.RowDefinitions>
+        <Label Content="First Name" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Last Name" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="2" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Phone#" Grid.Column="1" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="3" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="height Inches" Grid.Column="1" HorizontalAlignment="Left" Margin="6,5,0,0" Grid.Row="4" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="weight Inches" Grid.Column="1" HorizontalAlignment="Left" Margin="10,10,0,0" Grid.Row="5" VerticalAlignment="Top" FontSize="20"/>
+        <Label Content="Your BMI is:" Grid.Column="4" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="30" RenderTransformOrigin="-0.447,0.574" Grid.ColumnSpan="3" Grid.RowSpan="2" />
+        <TextBox x:Name="xFirstNameBox" Grid.Column="2" HorizontalAlignment="Left" Margin="27,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="27" Width="77" FontSize="20"/>
+        <TextBox x:Name="xLastNameBox" Grid.Column="2" HorizontalAlignment="Left" Margin="27,14,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="20" Width="77"/>
+        <TextBox x:Name="xPhoneBox" Grid.Column="2" HorizontalAlignment="Left" Margin="27,14,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="23" FontSize="20" Width="77"/>
+        <TextBox x:Name="xHeightInchesBox" Grid.ColumnSpan="2" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="27,10,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" FontSize="20"/>
+        <TextBox x:Name="xWeightLbsBox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="27,10,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="77" Grid.ColumnSpan="2" FontSize="20"/>
+        <TextBlock x:Name="xYourBMIResults" Grid.Column="3" HorizontalAlignment="Left" Margin="36,9,-18,0" Grid.Row="2" Grid.RowSpan="2" TextWrapping="Wrap" Text="BMI RESULTS" VerticalAlignment="Top" RenderTransformOrigin="-1.863,-0.445" Width="414" Grid.ColumnSpan="5" FontSize="60" FontWeight="Bold"/>
+        <TextBlock x:Name="xBMIMessage" Grid.Column="5" HorizontalAlignment="Left" Margin="10,0,-62.409,0" Grid.Row="5" TextWrapping="Wrap" Text="Message:" VerticalAlignment="Top" Width="412" Height="102" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
+        <Button x:Name="SubmitBtn" Content="Submit" HorizontalAlignment="Left" Margin="41,75,0,0" Grid.Row="6" Width="75" RenderTransformOrigin="0.187,-0.836" Grid.ColumnSpan="2" FontSize="20"/>
+        <Button x:Name="ClearBtn" Content="Clear" Grid.Column="2" HorizontalAlignment="Left" Margin="0,79,0,0" Grid.Row="6" VerticalAlignment="Top" Width="75" Height="28" FontSize="20" Grid.RowSpan="2" Click="ClearBtn_Click"/>
+        <Button x:Name="ImportBtn" Content="Import" Grid.Column="4" HorizontalAlignment="Left" Margin="0,83,0,0" Grid.Row="6" VerticalAlignment="Top" Width="75" Height="28" Grid.ColumnSpan="2" FontSize="20" RenderTransformOrigin="0.539,-0.148" Grid.RowSpan="2" Click="ImportBtn_Click"/>
+        <Button x:Name="ExitBtn" Grid.ColumnSpan="2" Content="Exit" Grid.Column="6" HorizontalAlignment="Left" Margin="88,83,0,0" Grid.Row="6" VerticalAlignment="Top" Width="75" Height="28" FontSize="20" Grid.RowSpan="2"/>
+        <DataGrid x:Name="xDataGrid" AutoGenerateColumns="True" HorizontalAlignment="Left" Height="257" Grid.Row="7" VerticalAlignment="Top" Width="722" Grid.ColumnSpan="8" Margin="41,26,0,0" Grid.RowSpan="2"/>
+
+
+
+    </Grid>
+</Window>
